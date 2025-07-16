@@ -8,6 +8,5 @@ app.on("ready", () => {
     autoHideMenuBar: true,
     resizable: false,
   });
-
   mainWindow.loadFile(path.join(app.getAppPath(), "/dist-react/index.html"));
 });
