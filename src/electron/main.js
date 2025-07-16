@@ -6,6 +6,7 @@ app.on("ready", () => {
     fullscreen: false,
     minimizable: false,
     autoHideMenuBar: true,
+    resizable: false,
   });
 
   mainWindow.loadFile(path.join(app.getAppPath(), "/dist-react/index.html"));
