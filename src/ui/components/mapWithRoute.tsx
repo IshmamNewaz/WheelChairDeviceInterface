@@ -24,7 +24,7 @@ function MapWithRoute() {
   const [selectedPlace, setSelectedPlace] = useState<google.maps.places.PlaceResult | null>(null);
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyAu8IP2NCr0DMMboULhk_SicbL1q8WGW50',
+    googleMapsApiKey: '#',
     libraries: ['places']
   });
 
