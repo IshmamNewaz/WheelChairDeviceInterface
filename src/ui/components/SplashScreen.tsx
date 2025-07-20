@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import reactLogo from '../assets/aiublogo.svg';
+import reactLogo from '../assets/sklentrlogo.png';
 
 interface SplashScreenProps {
   onAnimationComplete: () => void;
@@ -61,7 +61,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onAnimationComplete }) => {
           marginTop: '20px',
         }}
       >
-        Welcome to WheelChairFront
+        Developed By SKLENTR INC.
       </p>
       <p
         style={{
@@ -70,7 +70,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onAnimationComplete }) => {
           fontSize: '0.8em',
         }}
       >
-        Developed By D2A2I
+        Technology Partner AIUB
       </p>
     </div>
   );

@@ -50,8 +50,8 @@ const SearchPanel: React.FC<SearchPanelProps> = ({ onFromLocationSet, onToLocati
   }, [fromSearchTerm, toSearchTerm, onFromLocationSet, onToLocationSet, onSearchResult]);
 
   return (
-    <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', height: '100%' }}>
-      <h2>Find Your Route</h2>
+    <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <h2 style={{ fontSize: '1.5rem', alignSelf: 'flex-start', margin: 0, marginBottom: '20px' }}>Find Your Route</h2>
       <input
         type="text"
         placeholder="From (e.g., Current Location)"
@@ -60,15 +60,15 @@ const SearchPanel: React.FC<SearchPanelProps> = ({ onFromLocationSet, onToLocati
         style={{
           boxSizing: `border-box`,
           border: `1px solid transparent`,
-          width: `80%`,
-          height: `32px`,
+          width: `100%`,
+          height: `40px`,
           padding: `0 12px`,
           borderRadius: `3px`,
           boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
-          fontSize: `14px`,
+          fontSize: `16px`,
           outline: `none`,
           textOverflow: `ellipses`,
-          marginBottom: '10px'
+          marginBottom: '15px'
         }}
       />
       <input
@@ -79,50 +79,53 @@ const SearchPanel: React.FC<SearchPanelProps> = ({ onFromLocationSet, onToLocati
         style={{
           boxSizing: `border-box`,
           border: `1px solid transparent`,
-          width: `80%`,
-          height: `32px`,
+          width: `100%`,
+          height: `40px`,
           padding: `0 12px`,
           borderRadius: `3px`,
           boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
-          fontSize: `14px`,
+          fontSize: `16px`,
           outline: `none`,
           textOverflow: `ellipses`,
-          marginBottom: '10px'
+          marginBottom: '20px'
         }}
       />
-      <button
-        onClick={handleShowRoute}
-        style={{
-          height: `32px`,
-          padding: `0 15px`,
-          borderRadius: `3px`,
-          border: `none`,
-          backgroundColor: `#4285F4`,
-          color: `white`,
-          fontSize: `14px`,
-          cursor: `pointer`,
-          boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
-          marginBottom: '20px',
-        }}
-      >
-        Show Route
-      </button>
-      <button
-        onClick={onExitClick}
-        style={{
-          height: `32px`,
-          padding: `0 15px`,
-          borderRadius: `3px`,
-          border: `none`,
-          backgroundColor: `#f44336`,
-          color: `white`,
-          fontSize: `14px`,
-          cursor: `pointer`,
-          boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
-        }}
-      >
-        Exit App
-      </button>
+      <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: '20px' }}>
+        <button
+          onClick={handleShowRoute}
+          style={{
+            height: `40px`,
+            padding: `0 20px`,
+            borderRadius: `3px`,
+            border: `none`,
+            backgroundColor: `#4285F4`,
+            color: `white`,
+            fontSize: `16px`,
+            cursor: `pointer`,
+            boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
+          }}
+        >
+          Show Route
+        </button>
+      </div>
+      <div style={{ marginTop: 'auto', marginBottom: '20px', display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <button
+          onClick={onExitClick}
+          style={{
+            height: `40px`,
+            padding: `0 20px`,
+            borderRadius: `3px`,
+            border: `none`,
+            backgroundColor: `#f44336`,
+            color: `white`,
+            fontSize: `16px`,
+            cursor: `pointer`,
+            boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
+          }}
+        >
+          Exit App
+        </button>
+      </div>
     </div>
   );
 };
