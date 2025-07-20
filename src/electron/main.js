@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import { app, BrowserWindow, ipcMain, session } from "electron";
 import path from "path";
 
 app.on("ready", () => {
@@ -13,6 +13,14 @@ app.on("ready", () => {
       contextIsolation: true,
       nodeIntegration: false,
     },
+  });
+
+  mainWindow.webContents.session.setPermissionRequestHandler((webContents, permission, callback) => {
+    if (permission === 'geolocation') {
+      callback(true);
+    } else {
+      callback(false);
+    }
   });
 
   mainWindow.loadFile(path.join(app.getAppPath(), "/dist-react/index.html"));

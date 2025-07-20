@@ -30,10 +30,17 @@ function App() {
 
   useEffect(() => {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(pos => {
-        const userLoc: L.LatLngExpression = [pos.coords.latitude, pos.coords.longitude];
-        setUserGeolocation(userLoc);
-      });
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          const userLoc: L.LatLngExpression = [pos.coords.latitude, pos.coords.longitude];
+          setUserGeolocation(userLoc);
+          setFromLocation(userLoc);
+        },
+        err => {
+          console.error("Error getting geolocation:", err);
+        },
+        { enableHighAccuracy: true }
+      );
     }
   }, []);
 
@@ -105,3 +112,4 @@ function App() {
 }
 
 export default App
+
